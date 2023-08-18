@@ -14,16 +14,10 @@ fn extract_quoted_words(qoute : &str) -> Vec<String> {
     let mut result = Vec::new();
 
     for word in qoute{
-
-        let open_star = word.chars().next().unwrap_or('_');
-        let close_star = word.chars().rev().next().unwrap_or('_');
         
-        if open_star == '*' && close_star == '*' {
+        if word.starts_with("*") && word.ends_with("*") {
 
-            let (_, word) = word.split_at(1);
-            let (word, _) = word.split_at(word.len()-1);
-
-            result.push(word.to_string());
+            result.push(word[1..word.len()-1].to_string())       
         }
 
     }

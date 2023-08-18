@@ -36,31 +36,21 @@ fn extract_quoted_words(qoute : &str, mut result : Vec<String>)-> Vec<String> {
 
 
     //checking for the qoute
-    let open_star = pre_word.chars().next().unwrap();
-    let close_star = pre_word.chars().rev().next().unwrap();
     
-    if open_star == '*' && close_star == '*' {
+    if pre_word.starts_with("*") && pre_word.ends_with("*") {
 
         //remove first star and last star of the word
-        let (_, word) = pre_word.split_at(1);
-        let (word, _) = word.split_at(word.len()-1);
-
-        result.push(word.to_string());
+        result.push(pre_word[1..pre_word.len()-1].to_string());
     }
 
     //check for the last work in the sentence if it is a qoute
     if !rest_words.contains(" ") && rest_words !="" {
-
-        let open_star = rest_words.chars().next().unwrap();
-        let close_star = rest_words.chars().rev().next().unwrap();
         
-        if open_star == '*' && close_star == '*' {
+        if pre_word.starts_with("*") && pre_word.ends_with("*") {
     
             //remove first star and last star of the word
-            let (_, word) = rest_words.split_at(1);
-            let (word, _) = word.split_at(word.len()-1);
     
-            result.push(word.to_string());
+            result.push(pre_word[1..pre_word.len()-1].to_string());
         }
     }
 
