@@ -26,7 +26,7 @@ fn split_grade(grade_list : Vec<&str>)-> (Vec<&str>, Vec<&str>) {
     
 }
 
-
+#[cfg(test)]
 #[test]
 fn test_split_grade() {
 

@@ -27,7 +27,7 @@ fn count_vowels(vowel_string: &str ) -> i32 {
 }
 
 
-
+#[cfg(test)]
 #[test]
 fn test_vowels_count() {
     assert_eq!(count_vowels(""), 0);

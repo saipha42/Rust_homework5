@@ -31,7 +31,7 @@ fn split_score_to_grade(score_list : Vec<i32>)-> (Vec<(String, i32)>, Vec<(Strin
     
 }
 
-
+#[cfg(test)]
 #[test]
 fn test_split_score_to_grade() {
     assert_eq!(split_score_to_grade(vec![]), (vec![], vec![]));

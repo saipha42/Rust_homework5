@@ -29,7 +29,6 @@ fn count_vowels(vowel_string: &str , mut result : i32) -> i32 {
 
 
 #[cfg(test)]
-
 #[test]
 fn test_vowels_count_recursion() {
     assert_eq!(count_vowels("", 0), 0);

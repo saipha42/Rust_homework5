@@ -41,7 +41,7 @@ fn count_vowels_v2(vowel_string: &str ) -> Vec<(&str, i32)> {
 }
 
 
-
+#[cfg(test)]
 #[test]
 fn test_vowels_count_v2() {
     assert_eq!(count_vowels_v2(""), []);
