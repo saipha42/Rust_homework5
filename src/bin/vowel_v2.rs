@@ -48,8 +48,8 @@ fn test_vowels_count_v2() {
     assert_eq!(
         count_vowels_v2("ab12Exey5 7x8U3y5z"),
         [
-            ("ab12Exey5", 3), // 'a', 'E', 'e'
-            ("7x8U3y5z", 1) // 'U'
+            ("ab12Exey5", 3),
+            ("7x8U3y5z", 1) 
         ]
     );
 }

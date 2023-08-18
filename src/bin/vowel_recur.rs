@@ -31,7 +31,7 @@ fn count_vowels(vowel_string: &str , mut result : i32) -> i32 {
 #[cfg(test)]
 
 #[test]
-fn test_vowels_count() {
+fn test_vowels_count_recursion() {
     assert_eq!(count_vowels("", 0), 0);
     assert_eq!(count_vowels("abEcd", 0), 2);
     assert_eq!(count_vowels("ab12Exey5 7x8U3y5z", 0), 4);
@@ -39,7 +39,7 @@ fn test_vowels_count() {
 }
 
 #[test]
-fn test_vowels_count_extra_cases() {
+fn test_vowels_count_recursion_extra_cases() {
     
     assert_eq!(count_vowels("ab12Exey5", 0), 3);
     assert_eq!(count_vowels("ab12Exey5 ab12Exey5 aeiou", 0), 11);
