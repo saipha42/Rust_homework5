@@ -1,7 +1,7 @@
 
 fn main() {
 
-    let qoute = " *";
+    let qoute = "  C ** *C++* *Java *Python* Rust*    ";
 
     let result = extract_quoted_words(qoute, Vec::new());
     println!("Result of qoutes : {:?}", result);
